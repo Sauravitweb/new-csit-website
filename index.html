@@ -230,15 +230,16 @@
 </script>
     <script>
         // for tabs -->
-  document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
         tab.addEventListener('mouseenter', function() {
             // Hide content of all other tabs
-            tabs.forEach(otherTab => {
-                if (otherTab !== tab) {
-                    otherTab.querySelector('.tab-content').style.display = 'none';
+            tabContents.forEach(content => {
+                if (!tab.contains(content)) {
+                    content.style.display = 'none';
                 }
             });
             // Show content of the hovered tab
@@ -246,11 +247,25 @@
         });
 
         tab.addEventListener('mouseleave', function() {
-            // Hide content when leaving the tab
-            tab.querySelector('.tab-content').style.display = 'none';
+            // Hide content when mouse leaves the tab
+            setTimeout(() => {
+                if (!tab.matches(':hover')) {
+                    tab.querySelector('.tab-content').style.display = 'none';
+                }
+            }, 300); // Delay to allow time for hovering over nested options
         });
     });
+
+    // Optional: Close all tab contents when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.tab')) {
+            tabContents.forEach(content => {
+                content.style.display = 'none';
+            });
+        }
+    });
 });
+
 
     </script>
 <script>
