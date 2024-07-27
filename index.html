@@ -71,15 +71,15 @@
 </script>
 <script>
     //For full hover
-    document.querySelectorAll('nav ul li a').forEach(link => {
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('nav ul li a').forEach(link => {
             link.addEventListener('mouseenter', function(e) {
                 const linkRect = link.getBoundingClientRect();
-                const mouseX = e.clientX - linkRect.left;
-                const linkWidth = linkRect.width;
+                const mouseX = e.clientX - linkRect.left; // Calculate the mouse X position relative to the link
 
                 // Set custom properties for the animation
                 link.style.setProperty('--mouse-x', `${mouseX}px`);
-                link.style.setProperty('--width', `${linkWidth}px`);
+                link.style.setProperty('--width', `${linkRect.width}px`);
             });
 
             link.addEventListener('mouseleave', function() {
@@ -87,6 +87,7 @@
                 link.style.setProperty('--width', '0');
             });
         });
+    });
 
 
 
