@@ -80,7 +80,8 @@ nav ul li a {
     min-width: 200px; /* Adjust width as needed */
 }
 
-.tab:hover .tab-content {
+.tab:hover .tab-content,
+.tab-content:hover {
     display: block; /* Show content on hover */
 }
 
@@ -93,7 +94,8 @@ nav ul li a {
     padding-left: 20px; /* Indent nested options */
 }
 
-.option-group:hover .nested-options {
+.option-group:hover .nested-options,
+.nested-options:hover {
     display: block; /* Show nested options on hover */
 }
 
