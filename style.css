@@ -4,30 +4,31 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: #00FFE0;
-    /*     background-color: #080808; */
     color: #000;
 }
+
 #header {
     background-color: #fff;
     width: 100%;
-    height: 50px; /* Adjust height as needed */
+    height: 50px;
     display: flex;
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    position: relative; /* For positioning the nav items */
+    align-items: center;
+    justify-content: center;
+    position: relative;
     background-size: cover;
 }
 
 .container {
-    width: 100%; /* Ensure container takes full width */
-    max-width: 1200px; /* Set a maximum width for the container */
-    padding: 10px 10%; /* Adjust padding as needed */
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 10%;
+    box-sizing: border-box;
 }
 
 nav {
@@ -35,7 +36,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Make sure nav spans the full width of the container */
+    width: 100%;
 }
 
 .logo {
@@ -47,13 +48,14 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    flex: 1; /* Allow the list to take up available space */
-    justify-content: center; /* Center list items horizontally */
+    flex: 1;
+    justify-content: center;
 }
 
 nav ul li {
     display: inline-block;
     margin: 10px 20px;
+    position: relative; /* Ensure relative positioning for the pseudo-element */
 }
 
 nav ul li a {
@@ -61,17 +63,19 @@ nav ul li a {
     font-size: 18px;
     color: #000;
     position: relative;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
 }
 
 nav ul li a::after {
     content: '';
-    width: 0;
+    display: block;
     height: 3px;
     background: #00248B;
     position: absolute;
-    left: 0;
+    left: var(--mouse-x, 0);
     bottom: -6px;
-    transition: 0.5s;
+    width: var(--width, 0);
+    transition: width 0.5s ease, left 0.5s ease;
 }
 
 nav ul li a:hover::after {
