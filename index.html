@@ -70,6 +70,24 @@
 
 </script>
 <script>
+    //For full hover
+    document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('mouseenter', function(e) {
+        const linkRect = link.getBoundingClientRect();
+        const mouseX = e.clientX - linkRect.left;
+        const linkWidth = linkRect.width;
+        link.style.setProperty('--mouse-x', `${mouseX}px`);
+        link.style.setProperty('--width', `${linkWidth}px`);
+    });
+
+    link.addEventListener('mouseleave', function() {
+        link.style.setProperty('--width', '0');
+    });
+});
+
+</script>
+    
+<script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzP0FXe9TqK5VOR86Weic_FZTYcdheb-i3WSKNuCpmmfBbBAZ298z5FqmQ4E66XHCa9wQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg");
