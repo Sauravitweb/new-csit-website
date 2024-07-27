@@ -64,8 +64,41 @@ nav ul li a {
     color: #000;
     position: relative;
     overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    display: block;
+}
+/* for tab contents */
+
+.tab-content {
+    display: none; /* Hide content by default */
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    top: 100%; /* Position below the tab */
+    left: 0;
 }
 
+.tab:hover .tab-content {
+    display: block; /* Show content on hover */
+}
+
+.tab-content a {
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+}
+
+.tab-content a:hover {
+    background-color: #f0f0f0;
+}
+
+.tab:hover > a {
+    background-color: #e0e0e0; /* Optional: Highlight the hovered tab */
+}
+
+/* for tab contents */
 nav ul li a::after {
     content: '';
     display: block;
