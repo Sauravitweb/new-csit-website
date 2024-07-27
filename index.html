@@ -76,15 +76,18 @@
         const linkRect = link.getBoundingClientRect();
         const linkWidth = linkRect.width;
         const mouseX = e.clientX - linkRect.left;
-        
+
+        // Set custom properties for the animation
         link.style.setProperty('--mouse-x', `${mouseX}px`);
         link.style.setProperty('--width', `${linkWidth}px`);
     });
 
     link.addEventListener('mouseleave', function() {
+        // Reset the width when the mouse leaves
         link.style.setProperty('--width', '0');
     });
 });
+
 
 
 </script>
