@@ -74,8 +74,9 @@
     document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('mouseenter', function(e) {
         const linkRect = link.getBoundingClientRect();
-        const mouseX = e.clientX - linkRect.left;
         const linkWidth = linkRect.width;
+        const mouseX = e.clientX - linkRect.left;
+        
         link.style.setProperty('--mouse-x', `${mouseX}px`);
         link.style.setProperty('--width', `${linkWidth}px`);
     });
@@ -84,6 +85,7 @@
         link.style.setProperty('--width', '0');
     });
 });
+
 
 </script>
     
