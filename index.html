@@ -11,15 +11,50 @@
     <div id="header">
         <div class="container">
             <nav>
-               
                 <ul id="sidemenu">
-                    <li><a href="#header">pyq_qsn</a></li>
-                    <li><a href="#about">syallabus</a></li>
-                    <li><a href="#services">note</a></li>
-                     <a href="index.html"><img src="images/logo.png" class="logo"></a>
-                    <li><a href="#portfolio">news</a></li>
-                    <li><a href="#contact">quiz</a></li>
-                    <li><a href="#contact">pyq_qsn_soln</a></li>
+                    <li class="tab">
+                        <a href="#header">pyq_qsn</a>
+                        <div class="tab-content">
+                            <a href="#link1">Option 1</a>
+                            <a href="#link2">Option 2</a>
+                        </div>
+                    </li>
+                    <li class="tab">
+                        <a href="#about">syllabus</a>
+                        <div class="tab-content">
+                            <a href="#link3">Option 3</a>
+                            <a href="#link4">Option 4</a>
+                        </div>
+                    </li>
+                    <li class="tab">
+                        <a href="#services">note</a>
+                        <div class="tab-content">
+                            <a href="#link5">Option 5</a>
+                            <a href="#link6">Option 6</a>
+                        </div>
+                    </li>
+                    <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
+                    <li class="tab">
+                        <a href="#portfolio">news</a>
+                        <div class="tab-content">
+                            <a href="#link7">Option 7</a>
+                            <a href="#link8">Option 8</a>
+                        </div>
+                    </li>
+                    <li class="tab">
+                        <a href="#contact">quiz</a>
+                        <div class="tab-content">
+                            <a href="#link9">Option 9</a>
+                            <a href="#link10">Option 10</a>
+                        </div>
+                    </li>
+                    <li class="tab">
+                        <a href="#contact">pyq_qsn_soln</a>
+                        <div class="tab-content">
+                            <a href="#link11">Option 11</a>
+                            <a href="#link12">Option 12</a>
+                        </div>
+                    </li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
@@ -111,7 +146,30 @@
 
 
 </script>
-    
+    <script>
+        // for tabs -->
+        document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tab');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('mouseenter', function() {
+            // Hide content of all other tabs
+            tabs.forEach(otherTab => {
+                if (otherTab !== tab) {
+                    otherTab.querySelector('.tab-content').style.display = 'none';
+                }
+            });
+            // Show content of the hovered tab
+            tab.querySelector('.tab-content').style.display = 'block';
+        });
+
+        tab.addEventListener('mouseleave', function() {
+            // Hide content when leaving the tab
+            tab.querySelector('.tab-content').style.display = 'none';
+        });
+    });
+});
+    </script>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzP0FXe9TqK5VOR86Weic_FZTYcdheb-i3WSKNuCpmmfBbBAZ298z5FqmQ4E66XHCa9wQ/exec'
     const form = document.forms['submit-to-google-sheet']
