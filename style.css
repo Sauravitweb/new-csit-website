@@ -42,7 +42,7 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     font-size: 18px;
-    color: #fff;
+    color: #000;
     position: relative;
 }
 nav ul li a::After{
