@@ -77,10 +77,24 @@ nav ul li a {
     z-index: 10;
     top: 100%; /* Position below the tab */
     left: 0;
+    min-width: 200px; /* Adjust width as needed */
 }
 
 .tab:hover .tab-content {
     display: block; /* Show content on hover */
+}
+
+.option-group {
+    margin-bottom: 10px;
+}
+
+.nested-options {
+    display: none; /* Hide nested options by default */
+    padding-left: 20px; /* Indent nested options */
+}
+
+.option-group:hover .nested-options {
+    display: block; /* Show nested options on hover */
 }
 
 .tab-content a {
