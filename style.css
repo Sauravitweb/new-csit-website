@@ -80,9 +80,13 @@ nav ul li a {
     min-width: 200px; /* Adjust width as needed */
 }
 
-.tab:hover .tab-content,
-.tab-content:hover {
+nav ul li:hover .tab-content {
     display: block; /* Show content on hover */
+}
+
+.tab-content:hover,
+.tab-content:focus-within {
+    display: block; /* Keep content visible when hovering or focusing within */
 }
 
 .option-group {
