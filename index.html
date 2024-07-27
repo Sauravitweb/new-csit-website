@@ -15,46 +15,44 @@
                     <li class="tab">
                         <a href="#header">pyq_qsn</a>
                         <div class="tab-content">
-                            <a href="#link1">Option 1</a>
-                            <a href="#link2">Option 2</a>
+                            <div class="option-group">
+                                <a href="#link1">Option 1</a>
+                                <div class="nested-options">
+                                    <a href="#sub-link1">Sub Option 1</a>
+                                    <a href="#sub-link2">Sub Option 2</a>
+                                </div>
+                            </div>
+                            <div class="option-group">
+                                <a href="#link2">Option 2</a>
+                                <div class="nested-options">
+                                    <a href="#sub-link3">Sub Option 3</a>
+                                    <a href="#sub-link4">Sub Option 4</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
+                    <!-- Repeat for other tabs -->
                     <li class="tab">
                         <a href="#about">syllabus</a>
                         <div class="tab-content">
-                            <a href="#link3">Option 3</a>
-                            <a href="#link4">Option 4</a>
+                            <div class="option-group">
+                                <a href="#link3">Option 3</a>
+                                <div class="nested-options">
+                                    <a href="#sub-link5">Sub Option 5</a>
+                                    <a href="#sub-link6">Sub Option 6</a>
+                                </div>
+                            </div>
+                            <div class="option-group">
+                                <a href="#link4">Option 4</a>
+                                <div class="nested-options">
+                                    <a href="#sub-link7">Sub Option 7</a>
+                                    <a href="#sub-link8">Sub Option 8</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li class="tab">
-                        <a href="#services">note</a>
-                        <div class="tab-content">
-                            <a href="#link5">Option 5</a>
-                            <a href="#link6">Option 6</a>
-                        </div>
-                    </li>
+                    <!-- Other tabs... -->
                     <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo"></a>
-                    <li class="tab">
-                        <a href="#portfolio">news</a>
-                        <div class="tab-content">
-                            <a href="#link7">Option 7</a>
-                            <a href="#link8">Option 8</a>
-                        </div>
-                    </li>
-                    <li class="tab">
-                        <a href="#contact">quiz</a>
-                        <div class="tab-content">
-                            <a href="#link9">Option 9</a>
-                            <a href="#link10">Option 10</a>
-                        </div>
-                    </li>
-                    <li class="tab">
-                        <a href="#contact">pyq_qsn_soln</a>
-                        <div class="tab-content">
-                            <a href="#link11">Option 11</a>
-                            <a href="#link12">Option 12</a>
-                        </div>
-                    </li>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i class="fas fa-bars" onclick="openmenu()"></i>
@@ -148,7 +146,7 @@
 </script>
     <script>
         // for tabs -->
-        document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab');
 
     tabs.forEach(tab => {
@@ -169,6 +167,7 @@
         });
     });
 });
+
     </script>
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzP0FXe9TqK5VOR86Weic_FZTYcdheb-i3WSKNuCpmmfBbBAZ298z5FqmQ4E66XHCa9wQ/exec'
