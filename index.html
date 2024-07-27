@@ -527,7 +527,7 @@
 </script>
     <script>
         // for tabs -->
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -561,7 +561,18 @@
             });
         }
     });
+
+    // Handle nested options hover effect
+    document.querySelectorAll('.option-group').forEach(group => {
+        group.addEventListener('mouseenter', () => {
+            group.querySelector('.nested-options').style.display = 'block';
+        });
+        group.addEventListener('mouseleave', () => {
+            group.querySelector('.nested-options').style.display = 'none';
+        });
+    });
 });
+
 
 
     </script>
