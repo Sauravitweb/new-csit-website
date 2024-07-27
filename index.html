@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Khanal - Graphics Designer, Saurav - Full Stack Developer & Visual Designer, Saurav - Tech Enthusiast & Creative Technologist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8ca15bada1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png"class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+                
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Saurav </span> <br> Khanal From Nepal.</h1>
+            </div>
+        </div>
+    </div>
+    <!-------------------About------------->
+<div id="about">
+    <div class="container">
+        
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/dev verticala.jpg" >
+            </div>
+            <div class="about-col-2">
+        <h1 class="sub-title">About me</h1>
+        <p>Hello, He's Saurav Khanal From Nepal</p>
+    <div class="tab-titles">
+        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+        <div class="tab-links" onclick="opentab('education')">Education</div>
+    </div>        
+    <div class="tab-contents active-tab" id="skills"><ul>
+    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+    <li><span>Web Development</span><br>Web app Development</li>
+    <li><span>App Development</span><br>Building Android/ios apps</li>
+    </ul></div>
+    <div class="tab-contents" id="experience"><ul>
+        <li><span>2024 - Present</span><br>Digital Creater</li>
+    </ul></div>
+ 
+         
+    <div class="tab-contents" id="education"><ul>
+        <li><span>2024 - Present</span><br>B.Sc.CSIT at Mechi Multiple Campus</li>
+    <li><span>2023</span><br>+2 from Mohanmaya Secondary School</li>
+</ul></div>
+    
+
+    </div>
+    </div>        
+    
+        </div>
+    </div>
+</div>
+
+<!------------------Services----------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>As a Web designer with best backend foundation. Saurav provides Web design service</p>
+                <a href="#">Lsearn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>As a UI/UX designer with best backend foundation. Saurav provides UI/UX service</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>As a App designer with best backend foundation. Saurav providees App design service</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h2>Graphics Design</h2>
+                <p>As a Graphics designer and a best motion graphics designer, Saurav provides graphics design service</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Portfolio----------------->
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="images/online food.webp" alt="">
+            <div class="layer">
+                <h3>Food Ordering App</h3>
+                <p>This app helps you to order food from anywhere you are - from nearest store.
+                    Download it from paly store. </p>
+                    <a href="https://Ariescafeteria.netlify.app"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/music app.jpg" alt="">
+            <div class="layer">
+                <h3>Music App</h3>
+                <p>This app helps you to listen music from anywhere of any artist.
+                    Download it from paly store. </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/social media app.jpg" alt="">
+            <div class="layer">
+                <h3>Social Media App</h3>
+                <p>This app helps you to contact long/short distanced people with virtual or text based.
+                    Download it from paly store. </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+</div>
+</div>
+
+<!------------contact--------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> saurav.khanal28888@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+977 9827968040</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/saurav.khanal.503"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/varuas_hero"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/saurav--saurav"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="Documents/cv of saurav.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="E-mail" name="E-mail" placeholder="Your E-mail" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="copyright">
+        <p>© Copyright 2024, SauravDevDesign</p>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+
+    }
+
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu()
+    {
+        sidemenu.style.right = "0";
+    }
+    function closemenu()
+    {
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzP0FXe9TqK5VOR86Weic_FZTYcdheb-i3WSKNuCpmmfBbBAZ298z5FqmQ4E66XHCa9wQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        }
+            
+        )
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
