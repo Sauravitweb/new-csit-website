@@ -528,26 +528,28 @@
     <script>
         // for tabs -->
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tab');
+    const tabs = document.querySelectorAll('nav ul li');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
         tab.addEventListener('mouseenter', function() {
             // Hide content of all other tabs
             tabContents.forEach(content => {
-                if (!tab.contains(content)) {
-                    content.style.display = 'none';
-                }
+                content.style.display = 'none';
             });
             // Show content of the hovered tab
-            tab.querySelector('.tab-content').style.display = 'block';
+            const content = tab.querySelector('.tab-content');
+            if (content) {
+                content.style.display = 'block';
+            }
         });
 
         tab.addEventListener('mouseleave', function() {
             // Hide content when mouse leaves the tab
             setTimeout(() => {
-                if (!tab.matches(':hover')) {
-                    tab.querySelector('.tab-content').style.display = 'none';
+                const content = tab.querySelector('.tab-content');
+                if (content && !tab.matches(':hover')) {
+                    content.style.display = 'none';
                 }
             }, 500); // Delay to allow time for hovering over nested options
         });
@@ -555,7 +557,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optional: Close all tab contents when clicking outside
     document.addEventListener('click', function(event) {
-        if (!event.target.closest('.tab')) {
+        if (!event.target.closest('nav ul li')) {
             tabContents.forEach(content => {
                 content.style.display = 'none';
             });
@@ -565,10 +567,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle nested options hover effect
     document.querySelectorAll('.option-group').forEach(group => {
         group.addEventListener('mouseenter', () => {
-            group.querySelector('.nested-options').style.display = 'block';
+            const nestedOptions = group.querySelector('.nested-options');
+            if (nestedOptions) {
+                nestedOptions.style.display = 'block';
+            }
         });
         group.addEventListener('mouseleave', () => {
-            group.querySelector('.nested-options').style.display = 'none';
+            const nestedOptions = group.querySelector('.nested-options');
+            if (nestedOptions) {
+                nestedOptions.style.display = 'none';
+            }
         });
     });
 });
