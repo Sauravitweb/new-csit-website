@@ -138,10 +138,10 @@ nav ul li a {
 }
 
 /* For tab contents */
-/* .tab-content {
+ .tab-content {
     display: none;
     position: absolute;
-    background: #fff; */
+    background: #fff; 
 /*     border: 1px solid #ccc; */
     padding-top: 20px;
     padding-left: 100px;
