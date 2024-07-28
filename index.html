@@ -376,16 +376,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Additional event listener for nav mouseenter
+    nav.addEventListener('mouseenter', function() {
+        // Clear any existing hide timeout to keep content visible
+        clearTimeout(hideTimeout);
+    });
+
     // Additional event listener for nav mouseleave
     nav.addEventListener('mouseleave', function() {
-        clearTimeout(showTimeout);
-
-        // Hide all tab contents if mouse leaves the nav area
-        tabContents.forEach(content => {
-            content.classList.remove('show');
-        });
+        // Hide all tab contents after 3 seconds if mouse leaves the nav area
+        hideTimeout = setTimeout(() => {
+            tabContents.forEach(content => {
+                content.classList.remove('show');
+            });
+        }, 3000);
     });
 });
+</script>
+
 </script>
 
     <script>
