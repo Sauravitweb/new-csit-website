@@ -70,7 +70,7 @@ nav ul li a {
 
 /* For tab contents */
 .tab-content {
-    display: none;
+/*     display: none;
     position: absolute;
     background: #fff;
     border: 1px solid #ccc;
@@ -79,8 +79,15 @@ nav ul li a {
     top: 100%;
     left: 0;
     min-width: 200px;
-    width: 50%; /* Adjusted width to cover half of the screen */
-    max-width: 600px;
+    width: 50%; 
+    max-width: 600px; */
+    display: inline-block;
+padding: 7px 11px;
+  padding-top: 7px;
+margin-bottom: -6px;
+color: var(--r-globalnav-color-secondary);
+text-decoration: none;
+transition: color .32s cubic-bezier(.4,0,.6,1);
 }
 
 nav ul li:hover .tab-content {
