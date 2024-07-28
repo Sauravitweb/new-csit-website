@@ -61,7 +61,16 @@ nav ul li {
     position: relative;
     
 }
-
+/* flex tab*/
+.flex-nav {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-nav ul li {
+    flex-grow: 1; /* Makes the items take up equal space */
+    text-align: center; /* Centers the text */
+}
+/* flex tab*/
 nav ul li:hover .tab-content { 
 display: block;
 visibility: visible;
