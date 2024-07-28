@@ -332,68 +332,67 @@
 </script>
 
      --><script>
-document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('nav ul li');
-    const tabContents = document.querySelectorAll('.tab-content');
-    const nav = document.querySelector('nav');
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('nav ul li.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const nav = document.querySelector('nav');
 
-    let showTimeout, hideTimeout;
+            let showTimeout, hideTimeout;
 
-    tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', function() {
-            // Clear any existing hide timeout
-            clearTimeout(hideTimeout);
+            tabs.forEach(tab => {
+                tab.addEventListener('mouseenter', function() {
+                    // Clear any existing hide timeout
+                    clearTimeout(hideTimeout);
 
-            // Hide content of all other tabs immediately
-            tabContents.forEach(content => {
-                content.classList.remove('show');
-            });
-
-            // Show content of the hovered tab after 3 seconds
-            const content = tab.querySelector('.tab-content');
-            if (content) {
-                showTimeout = setTimeout(() => {
-                    if (tab.matches(':hover')) {
-                        content.classList.add('show');
-                    }
-                }, 3000); // 3 seconds delay before showing
-            }
-        });
-
-        tab.addEventListener('mouseleave', function() {
-            // Clear any existing show timeout
-            clearTimeout(showTimeout);
-
-            // Delay hiding the content by 3 seconds
-            const content = tab.querySelector('.tab-content');
-            if (content) {
-                hideTimeout = setTimeout(() => {
-                    if (!nav.matches(':hover')) {
+                    // Hide content of all other tabs immediately
+                    tabContents.forEach(content => {
                         content.classList.remove('show');
+                    });
+
+                    // Show content of the hovered tab after 3 seconds
+                    const content = tab.querySelector('.tab-content');
+                    if (content) {
+                        showTimeout = setTimeout(() => {
+                            if (tab.matches(':hover')) {
+                                content.classList.add('show');
+                            }
+                        }, 3000); // 3 seconds delay before showing
                     }
-                }, 3000); // 3 seconds delay before hiding
-            }
-        });
-    });
+                });
 
-    // Additional event listener for nav mouseenter
-    nav.addEventListener('mouseenter', function() {
-        // Clear any existing hide timeout to keep content visible
-        clearTimeout(hideTimeout);
-    });
+                tab.addEventListener('mouseleave', function() {
+                    // Clear any existing show timeout
+                    clearTimeout(showTimeout);
 
-    // Additional event listener for nav mouseleave
-    nav.addEventListener('mouseleave', function() {
-        // Hide all tab contents after 3 seconds if mouse leaves the nav area
-        hideTimeout = setTimeout(() => {
-            tabContents.forEach(content => {
-                content.classList.remove('show');
+                    // Delay hiding the content by 3 seconds
+                    const content = tab.querySelector('.tab-content');
+                    if (content) {
+                        hideTimeout = setTimeout(() => {
+                            if (!nav.matches(':hover')) {
+                                content.classList.remove('show');
+                            }
+                        }, 3000); // 3 seconds delay before hiding
+                    }
+                });
             });
-        }, 3000);
-    });
-});
-</script>
 
+            // Additional event listener for nav mouseenter
+            nav.addEventListener('mouseenter', function() {
+                // Clear any existing hide timeout to keep content visible
+                clearTimeout(hideTimeout);
+            });
+
+            // Additional event listener for nav mouseleave
+            nav.addEventListener('mouseleave', function() {
+                // Hide all tab contents after 3 seconds if mouse leaves the nav area
+                hideTimeout = setTimeout(() => {
+                    tabContents.forEach(content => {
+                        content.classList.remove('show');
+                    });
+                }, 3000);
+            });
+        });
+    </script>
 </script>
 
     <script>
