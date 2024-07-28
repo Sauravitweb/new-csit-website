@@ -70,7 +70,7 @@ nav ul li a {
 
 /* For tab contents */
 .tab-content {
-/*     display: none;
+    display: none;
     position: absolute;
     background: #fff;
     border: 1px solid #ccc;
@@ -79,22 +79,9 @@ nav ul li a {
     top: 100%;
     left: 0;
     min-width: 200px;
-    width: 50%; 
-    max-width: 600px; */
-
-/* gpt dada */
-     display: none; /* Keep this as needed */
-    position: absolute; /* Change to fixed if you want it fixed to the viewport */
-    top: 10px;
-    left: 0;
-    width: 100vw; /* 100% of the viewport width */
-    height: 50vh; /* 50% of the viewport height */
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 10;
-    /* Optional: Remove min-width and max-width if you want full viewport coverage */
-    box-sizing: border-box; /* 
+    width: 100vw; 
+    height: 50vh;
+    max-width: 100vw;
     
 }
 
