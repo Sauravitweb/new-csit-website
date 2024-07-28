@@ -72,15 +72,11 @@ nav ul li::after {
     height: 3px;
     background: #00248B;
     position: absolute;
-/*     left: var(--mouse-x, 0);
+    left: var(--mouse-x, 0);
     bottom: -6px;
 width: var(--width, 0px);
     
-    transition: width 0.8s ease, left 0.8s ease; */
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    transition: width 0.8s ease;
+    transition: width 0.8s ease, left 0.8s ease; 
 }
 
 nav ul li:hover::after {
