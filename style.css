@@ -85,7 +85,7 @@ nav ul li a {
 /* gpt dada */
      display: none; /* Keep this as needed */
     position: absolute; /* Change to fixed if you want it fixed to the viewport */
-    top: 0;
+    top: 10px;
     left: 0;
     width: 100vw; /* 100% of the viewport width */
     height: 50vh; /* 50% of the viewport height */
