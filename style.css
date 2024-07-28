@@ -100,7 +100,7 @@ nav ul li a {
 
 /* For tab contents */
  .tab-content {
-    display: block;
+    display: inline-block;
     position: absolute;
     background: #fff; 
 /*     border: 1px solid #ccc; */
