@@ -70,24 +70,32 @@ nav ul li a {
 
 /* For tab contents */
 .tab-content {
- display: inline-block;/*     display: none; */
+/*     display: none;
     position: absolute;
     background: #fff;
     border: 1px solid #ccc;
-padding: 7px 11px;
-  padding-top: 7px;/*     padding: 10px; */
+    padding: 10px;
     z-index: 10;
     top: 100%;
     left: 0;
     min-width: 200px;
     width: 50%; 
-    max-width: 600px;
-   
+    max-width: 600px; */
 
-margin-bottom: -6px;
-color: var(--r-globalnav-color-secondary);
-text-decoration: none;
-transition: color .32s cubic-bezier(.4,0,.6,1);
+/* gpt dada */
+     display: none; /* Keep this as needed */
+    position: absolute; /* Change to fixed if you want it fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% of the viewport width */
+    height: 50vh; /* 50% of the viewport height */
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    /* Optional: Remove min-width and max-width if you want full viewport coverage */
+    box-sizing: border-box; /* 
+    
 }
 
 nav ul li:hover .tab-content {
