@@ -88,19 +88,19 @@ nav ul li a {
 left: -24vw;
 }
 .hd2 {
-left: -20vw;
+left: -28vw;
 }
 .hd3 {
-left: -16vw;
+left: -32vw;
 }
 .hd4 {
-left: -12vw;
+left: -36vw;
 }
 .hd5 {
-left: -8vw;
+left: -40vw;
 }
 .hd6 {
-left: -4vw;
+left: -44vw;
 }
 nav ul li:hover .tab-content {
     display: block;
