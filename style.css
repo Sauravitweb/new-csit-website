@@ -154,9 +154,13 @@ nav ul li::after {
     position: absolute;
     left: var(--mouse-x, 0);
     bottom: -6px;
-width: var(--width, 10px);
+width: var(--width, 0px);
     
     transition: width 0.8s ease, left 0.8s ease;
+}
+
+nav ul li:hover::after {
+    width: 100px;
 }
 
 /* Underline animation */
