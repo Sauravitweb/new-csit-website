@@ -23,7 +23,7 @@ body {
     justify-content: center;
     position: relative;
     background-size: cover;
-    margin: 100%;
+    
 }
 
 .container {
@@ -67,6 +67,7 @@ nav ul li a {
     color: #000;
     position: relative;
     overflow: hidden;
+    margin: 10px;
     display: block;
 }
 
