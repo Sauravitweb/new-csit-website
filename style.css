@@ -74,7 +74,8 @@ nav ul li a {
     position: absolute;
     background: #fff;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding-top: 20px;
+    padding-left: 100px;
     z-index: 10;
     top: 100%;
     left: -24vw;
@@ -127,18 +128,20 @@ nav ul li:hover .tab-content {
 }
 
 .tab-content a {
+    
     display: block;
-    padding: 5px;
+    padding-left: 100px;
+    padding-top: 10px;
     color: #000;
     text-decoration: none;
 }
 
 .tab-content a:hover {
-    background-color: #f0f0f0;
+    background-color: none;
 }
 
 .tab:hover > a {
-    background-color: #e0e0e0;
+    background-color: none;
 }
 
 /* Underline animation */
