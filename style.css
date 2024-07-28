@@ -67,7 +67,6 @@ nav ul li a {
     color: #000;
     position: relative;
     overflow: hidden;
-    margin: 10px;
     display: block;
 }
 
@@ -137,6 +136,7 @@ nav ul li:hover .tab-content {
     padding-top: 10px;
     color: #000;
     text-decoration: none;
+  
 }
 
 .tab-content a:hover {
@@ -145,6 +145,18 @@ nav ul li:hover .tab-content {
 
 .tab:hover > a {
     background-color: none;
+}
+nav ul li::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #00248B;
+    position: absolute;
+    left: var(--mouse-x, 0);
+    bottom: -6px;
+width: var(--width, 10px);
+    
+    transition: width 0.8s ease, left 0.8s ease;
 }
 
 /* Underline animation */
@@ -158,8 +170,9 @@ nav ul li a::after {
     bottom: -6px;
 width: var(--width, 10px);
     
-    transition: width 0.5s ease, left 0.5s ease;
+    transition: width 0.8s ease, left 0.8s ease;
 }
+
 
 nav ul li a:hover::after {
     width: 100px;
