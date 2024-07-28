@@ -110,6 +110,24 @@ nav ul li:hover .tab-content {
     display: block;
 }
 
+nav ul li::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #00248B;
+    position: absolute;
+    left: var(--mouse-x, 0);
+    bottom: -6px;
+width: var(--width, 0px);
+    
+    transition: width 0.8s ease, left 0.8s ease;
+}
+
+nav ul li:hover::after {
+    width: 100px;
+    overflow: hidden;
+}
+
 .tab-content:hover,
 .tab-content:focus-within {
     display: block;
@@ -147,23 +165,6 @@ nav ul li:hover .tab-content {
 .tab:hover > a {
     background-color: none;
 }
-nav ul li::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: #00248B;
-    position: absolute;
-    left: var(--mouse-x, 0);
-    bottom: -6px;
-width: var(--width, 0px);
-    
-    transition: width 0.8s ease, left 0.8s ease;
-}
-
-nav ul li:hover::after {
-    width: 100px;
-}
-
 /* Underline animation */
 nav ul li a::after {
     content: '';
