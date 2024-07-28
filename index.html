@@ -228,22 +228,66 @@
 
     <script>
         // for tabs -->
+// document.addEventListener('DOMContentLoaded', () => {
+//     const tabs = document.querySelectorAll('nav ul li');
+//     const tabContents = document.querySelectorAll('.tab-content');
+
+//     tabs.forEach(tab => {
+//         let showTimeout, hideTimeout;
+        
+//         tab.addEventListener('mouseenter', function() {
+//             // Clear any existing hide timeout
+//             clearTimeout(hideTimeout);
+            
+//             // Hide content of all other tabs immediately
+//             tabContents.forEach(content => {
+//                 content.classList.remove('show');
+//             });
+            
+//             // Show content of the hovered tab after 3 seconds
+//             const content = tab.querySelector('.tab-content');
+//             if (content) {
+//                 showTimeout = setTimeout(() => {
+//                     if (tab.matches(':hover')) {
+//                         content.classList.add('show');
+//                     }
+//                 }, 3000); // 3 seconds delay before showing
+//             }
+//         });
+
+//         tab.addEventListener('mouseleave', function() {
+//             // Clear any existing show timeout
+//             clearTimeout(showTimeout);
+
+//             // Hide content when mouse leaves the tab after 3 seconds
+//             const content = tab.querySelector('.tab-content');
+//             if (content) {
+//                 hideTimeout = setTimeout(() => {
+//                     if (!tab.matches(':hover') && !content.matches(':hover')) {
+//                         content.classList.remove('show');
+//                     }
+//                 }, 3000); // 3 seconds delay before hiding
+//             }
+//         });
+// <!--- ----------------------------------->
+        <script>
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('nav ul li');
     const tabContents = document.querySelectorAll('.tab-content');
+    const nav = document.querySelector('nav');
 
     tabs.forEach(tab => {
         let showTimeout, hideTimeout;
-        
+
         tab.addEventListener('mouseenter', function() {
             // Clear any existing hide timeout
             clearTimeout(hideTimeout);
-            
+
             // Hide content of all other tabs immediately
             tabContents.forEach(content => {
                 content.classList.remove('show');
             });
-            
+
             // Show content of the hovered tab after 3 seconds
             const content = tab.querySelector('.tab-content');
             if (content) {
@@ -259,36 +303,40 @@ document.addEventListener('DOMContentLoaded', () => {
             // Clear any existing show timeout
             clearTimeout(showTimeout);
 
-            // Hide content when mouse leaves the tab after 3 seconds
+            // Hide content when mouse leaves the nav area after 3 seconds
             const content = tab.querySelector('.tab-content');
             if (content) {
                 hideTimeout = setTimeout(() => {
-                    if (!tab.matches(':hover') && !content.matches(':hover')) {
+                    if (!nav.matches(':hover')) {
                         content.classList.remove('show');
                     }
                 }, 3000); // 3 seconds delay before hiding
             }
         });
-
-        // Ensures that content remains visible if mouse moves from tab to content
-        const content = tab.querySelector('.tab-content');
-        if (content) {
-            content.addEventListener('mouseenter', function() {
-                // Clear any existing hide timeout
-                clearTimeout(hideTimeout);
-                content.classList.add('show');
-            });
-
-            content.addEventListener('mouseleave', function() {
-                hideTimeout = setTimeout(() => {
-                    if (!tab.matches(':hover') && !content.matches(':hover')) {
-                        content.classList.remove('show');
-                    }
-                }, 3000); // 3 seconds delay before hiding
-            });
-        }
     });
 });
+</script>
+
+        // <!---- ----->
+        // Ensures that content remains visible if mouse moves from tab to content
+//         const content = tab.querySelector('.tab-content');
+//         if (content) {
+//             content.addEventListener('mouseenter', function() {
+//                 // Clear any existing hide timeout
+//                 clearTimeout(hideTimeout);
+//                 content.classList.add('show');
+//             });
+
+//             content.addEventListener('mouseleave', function() {
+//                 hideTimeout = setTimeout(() => {
+//                     if (!tab.matches(':hover') && !content.matches(':hover')) {
+//                         content.classList.remove('show');
+//                     }
+//                 }, 3000); // 3 seconds delay before hiding
+//             });
+//         }
+//     });
+// });
 
 //     // Optional: Close all tab contents when clicking outside
 //     document.addEventListener('click', function(event) {
