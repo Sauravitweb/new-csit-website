@@ -63,7 +63,7 @@ nav ul li {
 }
 
 nav ul li:hover .tab-content { 
-/*     display: block; */
+display: block;
 visibility: visible;
     opacity: 1;
 }
@@ -89,7 +89,7 @@ nav ul li:hover::after {
 
 .tab-content:hover,
 .tab-content:focus-within {
-/*     display: block; */
+     display: block; 
     visibility: visible;
     opacity: 1;
 
@@ -182,10 +182,7 @@ nav ul li a::after {
 width: var(--width, 10px);
     
     transition: width 0.8s ease, left 0.8s ease; 
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    transition: width 0.8s ease;
+    
 }
 
 
