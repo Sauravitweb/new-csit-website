@@ -71,13 +71,13 @@ nav ul li {
 /*     text-align: center; /* Centers the text */
 
 /* flex tab*/
-nav ul li:hover .tab-content { 
+/* nav ul li:hover .tab-content { 
 display: block;
 visibility: visible;
     opacity: 1;
 }
 /* transition */
-.tab-content {
+/* .tab-content {
   width: 60px;
   height: 60px;
   
@@ -99,7 +99,7 @@ visibility: visible;
   100% {
     visibility: visible;
   }
-}
+} */ */
 /* transition */
 nav ul li::after {
     content: '';
