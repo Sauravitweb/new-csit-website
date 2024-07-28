@@ -119,8 +119,19 @@ nav ul li a {
     width: 150vw; 
     height: 50vh;
     max-width: 100vw;
- transition: visibility 0.2s, opacity 0.2s;   
+  opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+    transition-delay: 0s, 3s; /* 0s delay for hiding, 3s delay for showing */
 }
+
+/* State to make the container visible */
+.tab-content.show {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 3s, 0s; /* 3s delay for hiding, 0s delay for showing */
+}
+
 .hd1 {
 left: -24vw;
 }
