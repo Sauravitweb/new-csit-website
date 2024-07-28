@@ -59,6 +59,7 @@ nav ul li {
     display: inline-block;
     margin: 10px 20px;
     position: relative;
+    overflow: hidden;
 }
 
 nav ul li a {
