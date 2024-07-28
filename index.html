@@ -521,7 +521,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     </script>
-<script>
+<!-- <script type="text/javascript">
+    $(document).ready(function(){
+        $(".js_only").hide();
+        setTimeout(function () {
+            $(".js_only").show();
+        }, 3000);
+    });
+</script>
+
+     -->
+    <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzP0FXe9TqK5VOR86Weic_FZTYcdheb-i3WSKNuCpmmfBbBAZ298z5FqmQ4E66XHCa9wQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg");
