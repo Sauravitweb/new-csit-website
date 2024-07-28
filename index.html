@@ -502,29 +502,8 @@
     }
 
 </script>
-<script>
-    //For full hover
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     document.querySelectorAll('nav ul li a').forEach(link => {
-    //         link.addEventListener('mouseenter', function(e) {
-    //             const linkRect = link.getBoundingClientRect();
-    //             const mouseX = e.clientX - linkRect.left; // Calculate the mouse X position relative to the link
-
-    //             // Set custom properties for the animation
-    //             link.style.setProperty('--mouse-x', `${mouseX}px`);
-    //             link.style.setProperty('--width', `${linkRect.width}px`);
-    //         });
-
-    //         link.addEventListener('mouseleave', function() {
-    //             // Reset the width when the mouse leaves
-    //             link.style.setProperty('--width', '0');
-    //         });
-    //     });
-    // });
 
 
-
-</script>
     <script>
         // for tabs -->
 document.addEventListener('DOMContentLoaded', () => {
@@ -555,31 +534,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Close all tab contents when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('nav ul li')) {
-            tabContents.forEach(content => {
-                content.style.display = 'none';
-            });
-        }
-    });
+//     // Optional: Close all tab contents when clicking outside
+//     document.addEventListener('click', function(event) {
+//         if (!event.target.closest('nav ul li')) {
+//             tabContents.forEach(content => {
+//                 content.style.display = 'none';
+//             });
+//         }
+//     });
 
-    // Handle nested options hover effect
-    document.querySelectorAll('.option-group').forEach(group => {
-        group.addEventListener('mouseenter', () => {
-            const nestedOptions = group.querySelector('.nested-options');
-            if (nestedOptions) {
-                nestedOptions.style.display = 'block';
-            }
-        });
-        group.addEventListener('mouseleave', () => {
-            const nestedOptions = group.querySelector('.nested-options');
-            if (nestedOptions) {
-                nestedOptions.style.display = 'none';
-            }
-        });
-    });
-});
+//     // Handle nested options hover effect
+//     document.querySelectorAll('.option-group').forEach(group => {
+//         group.addEventListener('mouseenter', () => {
+//             const nestedOptions = group.querySelector('.nested-options');
+//             if (nestedOptions) {
+//                 nestedOptions.style.display = 'block';
+//             }
+//         });
+//         group.addEventListener('mouseleave', () => {
+//             const nestedOptions = group.querySelector('.nested-options');
+//             if (nestedOptions) {
+//                 nestedOptions.style.display = 'none';
+//             }
+//         });
+//     });
+// });
 
 
 
