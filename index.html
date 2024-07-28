@@ -212,18 +212,7 @@
     }
 
 </script>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu()
-    {
-        sidemenu.style.right = "0";
-    }
-    function closemenu()
-    {
-        sidemenu.style.right = "-200px";
-    }
 
-</script>
 
 
     <script>
@@ -233,63 +222,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
-        let showTimeout, hideTimeout;
-        
         tab.addEventListener('mouseenter', function() {
-            // Clear any existing hide timeout
-            clearTimeout(hideTimeout);
-            
-            // Hide content of all other tabs immediately
+            // Hide content of all other tabs
             tabContents.forEach(content => {
-                content.classList.remove('show');
+                content.style.display = 'none';
             });
-            
-            // Show content of the hovered tab after 3 seconds
+            // Show content of the hovered tab
             const content = tab.querySelector('.tab-content');
             if (content) {
-                showTimeout = setTimeout(() => {
-                    if (tab.matches(':hover')) {
-                        content.classList.add('show');
-                    }
-                }, 3000); // 3 seconds delay before showing
+                content.style.display = 'block';
             }
         });
 
         tab.addEventListener('mouseleave', function() {
-            // Clear any existing show timeout
-            clearTimeout(showTimeout);
-
-            // Hide content when mouse leaves the tab after 3 seconds
-            const content = tab.querySelector('.tab-content');
-            if (content) {
-                hideTimeout = setTimeout(() => {
-                    if (!tab.matches(':hover') && !content.matches(':hover')) {
-                        content.classList.remove('show');
-                    }
-                }, 3000); // 3 seconds delay before hiding
-            }
+            // Hide content when mouse leaves the tab
+            setTimeout(() => {
+                const content = tab.querySelector('.tab-content');
+                if (content && !tab.matches(':hover')) {
+                    content.style.display = 'none';
+                }
+            }, 1000); // Delay to allow time for hovering over nested options
         });
-
-        // Ensures that content remains visible if mouse moves from tab to content
-        const content = tab.querySelector('.tab-content');
-        if (content) {
-            content.addEventListener('mouseenter', function() {
-                // Clear any existing hide timeout
-                clearTimeout(hideTimeout);
-                content.classList.add('show');
-            });
-
-            content.addEventListener('mouseleave', function() {
-                hideTimeout = setTimeout(() => {
-                    if (!tab.matches(':hover') && !content.matches(':hover')) {
-                        content.classList.remove('show');
-                    }
-                }, 3000); // 3 seconds delay before hiding
-            });
-        }
     });
-});
-
 //     // Optional: Close all tab contents when clicking outside
 //     document.addEventListener('click', function(event) {
 //         if (!event.target.closest('nav ul li')) {
