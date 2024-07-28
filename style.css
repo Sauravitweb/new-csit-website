@@ -23,6 +23,7 @@ body {
     justify-content: center;
     position: relative;
     background-size: cover;
+    margin: 100%;
 }
 
 .container {
