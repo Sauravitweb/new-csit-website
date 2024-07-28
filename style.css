@@ -67,7 +67,31 @@ display: block;
 visibility: visible;
     opacity: 1;
 }
+/* transition */
+.tab-content {
+  width: 60px;
+  height: 60px;
+  
+  background-color: #ff6699;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  
+  visibility: hidden;
+}
 
+.tab-content:hover {
+  background-color: #123;
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+/* transition */
 nav ul li::after {
     content: '';
     display: block;
