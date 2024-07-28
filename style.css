@@ -78,8 +78,8 @@ nav ul li a {
     z-index: 10;
     top: 100%;
     left: 0;
-/*     min-width: 200px; */
-    width: 100%; /* Adjusted width to cover half of the screen */
+    min-width: 200px;
+    width: 50%; /* Adjusted width to cover half of the screen */
     max-width: 600px;
 }
 
@@ -90,6 +90,7 @@ nav ul li:hover .tab-content {
 .tab-content:hover,
 .tab-content:focus-within {
     display: block;
+    width: 100%;
 }
 
 .option-group {
