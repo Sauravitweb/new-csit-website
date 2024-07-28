@@ -62,7 +62,7 @@ nav ul li {
     
 }
 
-nav ul li:hover  { /*.tab-content*/
+nav ul li:hover .tab-content { 
     display: block;
 }
 
@@ -81,6 +81,7 @@ width: var(--width, 0px);
 
 nav ul li:hover::after {
     width: 100px;
+    overflow: hidden;
 }
 
 .tab-content:hover,
