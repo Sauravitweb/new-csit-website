@@ -140,10 +140,16 @@ left: -66.2vw;
 
 .nested-options {
 display: none;
+padding-left: 650px;
+margin-left: 240px;
+position: absolute;
+top: 0px;
+padding-right: 250px;
+    /* display: none;
 padding-left: 0px;
 margin-left: 771px;
 position: absolute;
-    top: -7px;
+    top: 0px; */
 }
 
 .option-group:hover .nested-options,
