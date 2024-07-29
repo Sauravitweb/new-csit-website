@@ -4,7 +4,11 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
 html {
     scroll-behavior: smooth;
 }
@@ -141,7 +145,7 @@ left: -66.2vw;
 .nested-options {
 display: none;
 padding-left: 650px;
-margin-left: 340px;
+margin-left: 240px;
 position: absolute;
 top: 0px;
 padding-right: 250px;
