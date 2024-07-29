@@ -297,7 +297,7 @@
         </div>
     </div>
 <!--    Blogs container  -->
-    <div class="blogcontainer" id="DS2065">
+    <div class="blogcontainer" id="DS2065-content">
                 <h1>Discrete Structure<br></h1>
                 <div class="blogitem">
                     <div class="blog-img">
@@ -359,9 +359,11 @@
     </div> -->
 </div>
 <script>
-    document.getElementById("DS2065").addEventListener("click", function() {
-    document.getElementById("DS2065").style.display = "block";
+document.getElementById("DS2065").addEventListener("click", function() {
+    var content = document.getElementById("DS2065-content");
+    content.style.display = (content.style.display === "none") ? "block" : "none";
 });
+
 
 </script>
 
