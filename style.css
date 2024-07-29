@@ -16,6 +16,7 @@ html {
 body {
     background-color: #00FFE0;
     color: #000;
+    font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
 }
 
 #header {
