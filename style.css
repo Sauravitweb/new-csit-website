@@ -116,15 +116,11 @@ nav ul li a {
     top: 99%;
     left: -24vw;
     min-width: 241px;
-/* width: 159vw;
+ width: 159vw;
     
-    max-width: 101.6vw;*/
+    max-width: 101.6vw;
 
 height: 50vh;
-    width: 100%;
-    max-width: 1200px;
-    
-    box-sizing: border-box;
     
 }
 .hd1 {
