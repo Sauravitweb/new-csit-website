@@ -359,10 +359,16 @@
     </div> -->
 </div>
 <script>
-document.getElementById("DS2065").addEventListener("click", function() {
+document.getElementById("DS2065").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
     var content = document.getElementById("DS2065-content");
-    content.style.display = (content.style.display === "none") ? "block" : "none";
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
 });
+
 
 
 </script>
