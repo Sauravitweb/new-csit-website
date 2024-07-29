@@ -297,7 +297,7 @@
         </div>
     </div>
 <!--    Blogs container  -->
-    <div class="blogcontainer" id="DS2065-content" id="displaycontent">
+    <div class="blogcontainer displaycontent" id="DS2065-content" id="displaycontent">
                 <h1>Discrete Structure<br></h1>
                 <div class="blogitem">
                     <div class="blog-img">
@@ -363,7 +363,7 @@ document.getElementById("DS2065").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default anchor behavior
     var content = document.getElementById("DS2065-content");
     if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
+        content.style.display = "flex";
     } else {
         content.style.display = "none";
     }
