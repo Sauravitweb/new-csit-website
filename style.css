@@ -142,6 +142,8 @@ left: -66.2vw;
 display: none;
 padding-left: 0px;
 margin-left: 771px;
+position: absolute;
+    top: -7px;
 }
 
 .option-group:hover .nested-options,
