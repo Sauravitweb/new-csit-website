@@ -397,19 +397,22 @@ rotate: 360deg;
 }
 .container:hover a{
     padding: 1 0 0 0;
-    scale: 2.02;
+    scale: 1.02;
     color: #342;
+    transition: all ease 1s;
 }
 .blogcontainer:hover h1{
     padding: 1 0 0 0;
     scale: 1.02;
-    color: 
+    color: #342;
+    transition: all ease 1s;
 }
 
 .blogcontainer:hover p{
     padding: 1 0 0 0;
     scale: 1.02;
-    color: 
+    color: #342;
+    transition: all ease 1s;
 }
 #blog-img{
     transition: all ease 1s;
