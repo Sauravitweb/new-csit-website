@@ -397,8 +397,8 @@ rotate: 360deg;
 }
 .container:hover a{
     padding: 1 0 0 0;
-    scale: 1.02;
-    color: 
+    scale: 2.02;
+    color: #342;
 }
 .blogcontainer:hover h1{
     padding: 1 0 0 0;
