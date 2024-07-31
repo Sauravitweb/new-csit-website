@@ -23,7 +23,7 @@
 {
     display: none;
 }
-img{
+.blog-img{
     filter: drop-shadow(5px 5px 10px black);
 }
 
