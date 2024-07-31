@@ -395,6 +395,22 @@ rotate: 360deg;
     padding: 1 0 0 0;
     scale: 1.02;
 }
+.container:hover a{
+    padding: 1 0 0 0;
+    scale: 1.02;
+    color: 
+}
+.blogcontainer:hover h1{
+    padding: 1 0 0 0;
+    scale: 1.02;
+    color: 
+}
+
+.blogcontainer:hover p{
+    padding: 1 0 0 0;
+    scale: 1.02;
+    color: 
+}
 #blog-img{
     transition: all ease 1s;
 }
