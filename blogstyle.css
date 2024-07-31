@@ -186,7 +186,7 @@ border: 1px solid #ececec;
 }
 .blogcontainer{
  margin: 88px 8px;
-display: flex;
+display: in;
 justify-content: center;
 align-items:center;
 flex-wrap: wrap;
@@ -370,4 +370,26 @@ margin-top: 10px;
     margin-top: 10px;
 }
 
+/*     Exceptional */
+
+@keyframes rotate {
+100%{
+rotate: 360deg;
+}
+}
+.name::selection{
+    color:yellow;
+    background-color:black;
+}
+.blog-img:hover img{
+    padding: 10 0 0 0;
+    scale: 2;
+}
+#blog-img{
+    transition: all ease 1s;
+}
+/* Media  */
+@media(max-width: 1250px) {
+}
     
+
