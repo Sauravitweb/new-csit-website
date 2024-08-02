@@ -646,6 +646,10 @@ left: -61.4vw;
 }
 }
 @media(max-width:1200px){
+   .tab-content {
+   padding-left: 295px;
+   }
+   
 .hd1 {
 left: -23vw;
 }
@@ -666,7 +670,12 @@ left: -63.5vw;
 }
 }
 @media(max-width:1100px){
-.hd1 {
+
+   .tab-content {
+   ppadding-left: 239.9px;
+   }
+   
+   .hd1 {
 left: -20vw;
 }
 .hd2 {
@@ -686,7 +695,10 @@ left: -64.13vw;
 }
 }
 @media(max-width:1000px){
-.hd1 {
+.tab-content {
+   ppadding-left: 190px;
+   }
+   .hd1 {
 left: -17vw;
 }
 .hd2 {
@@ -706,7 +718,10 @@ left: -65.5vw;
 }
 }
 @media(max-width:900px){
-.hd1 {
+.tab-content {
+   ppadding-left: 137px;
+   }
+   .hd1 {
 left: -13vw;
 }
 .hd2 {
