@@ -705,6 +705,30 @@ left: -59.1vw;
 left: -65.5vw;
 }
 }
+@media(max-width:900px){
+.hd1 {
+left: -13vw;
+}
+.hd2 {
+left: -32.3vw;
+}
+.hd3 {
+left: -41.6vw;
+}
+.hd4 {
+left: -55.3vw;
+}
+.hd5 {
+left: -55.3vw;
+   width: 1000px;
+   max-width: 1000px;
+}
+.hd6 {
+left: -63.1vw;
+   max-width: 1000px;
+}
+}
+
 
 
 
