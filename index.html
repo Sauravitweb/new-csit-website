@@ -400,6 +400,9 @@ document.getElementById("DS2065").addEventListener("click", function(event) {
     }
 
 </script>
+
+        
+        
 <script>
     var sidemenu = document.getElementById("sidemenu");
     function openmenu()
@@ -412,6 +415,25 @@ document.getElementById("DS2065").addEventListener("click", function(event) {
     }
 
 </script>
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('mouseenter', () => {
+        const tabContent = tab.querySelector('.tab-content');
+        const tabRect = tab.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        const tabContentWidth = tabContent.offsetWidth;
+
+        // Calculate right edge of tab content
+        const rightEdge = tabRect.left + tabContentWidth;
+
+        if (rightEdge > viewportWidth) {
+            // Not enough space on the right side, align to left
+            tabContent.style.left = `${Math.max(0, tabRect.left)}px`;
+        } else {
+            // Enough space on the right side, align to the tab
+            tabContent.style.left = `${tabRect.left}px`;
+        }
+    });
+});
 
 
     <script>
