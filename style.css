@@ -11,156 +11,9 @@ letter-spacing: -.003em;
 html {
     scroll-behavior: smooth;
 }
-/* General Styles */
-body {
-    background-color: #00FFE0;
-    color: #333;
-    font-family: -apple-system, "Helvetica Neue", "Lucida Grande", sans-serif;
-    margin: 0;
-}
-
-/* Header and Navigation Styles */
-#header {
-    background-color: #fff;
-    width: 100%;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-size: cover;
-    box-sizing: border-box;
-    z-index: 1000; /* Ensure header and dropdowns stay above other content */
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 10%;
-    box-sizing: border-box;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    width: 50px;
-}
-
-nav ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    flex: 1;
-    justify-content: center;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 20px 20px 0;
-    position: relative;
-}
-
-nav ul li:hover .tab-content { 
-    display: block;
-}
-
-/* Tab Content Styles */
-.tab-content {
-    display: none;
-    position: absolute; /* Keep it absolute to the parent li */
-    background: #fff;
-    z-index: 1001; /* Above header */
-    top: 100%; /* Align right below the header */
-    left: 0; /* Default left alignment */
-    width: 100vw; /* Fill the width of the viewport */
-    max-width: 100vw;
-    box-sizing: border-box;
-    max-height: 50vh;
-    overflow-y: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    border: 1px solid #ccc;
-}
-
-/* Nested Options Styles */
-.option-group {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.nested-options {
-    display: none;
-    padding: 10px 0;
-    width: 100%;
-    background: #f9f9f9;
-}
-
-.option-group:hover .nested-options,
-.nested-options:hover {
-    display: block;
-}
-
-/* Link Styles */
-nav ul li a {
-    text-decoration: none;
-    font-size: 12px;
-    color: #000;
-    position: relative;
-    overflow: hidden;
-    display: block;
-    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: -.01em;
-}
-
-/* Underline Animation */
-nav ul li a::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: #00248B;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    transition: width 0.8s ease, left 0.8s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .tab-content {
-        position: static; /* Reset position for mobile */
-        width: 100%;
-    }
-
-    .nested-options {
-        position: static;
-    }
-}
 
 
-/*    body {
+    body {
     background-color: #00FFE0;
     color: #333;
     font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
@@ -252,15 +105,15 @@ display: block;
 font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
 font-weight: 400;
 letter-spacing: -.01em;
-} */
+} 
 
 /* For tab contents */
-/* .tab-content {
+.tab-content {
     display: none;
     position: absolute;
     background: #fff; */
 /*     border: 1px solid #ccc; previouse */
-/*     padding-top: 0px;
+     padding-top: 0px;
     padding-left: 332px;
     z-index: 10;
     top: 99%;
@@ -301,13 +154,13 @@ padding-left: 650px;
 margin-left: 240px;
 position: absolute;
 top: 0px;
-padding-right: 250px; */
+padding-right: 250px; 
     /* previousdisplay: none;
 padding-left: 0px;
 margin-left: 771px;
 position: absolute;
-    top: 0px; */
-/* }
+    top: 0px; */ 
+}
 
 .option-group:hover .nested-options,
 .nested-options:hover {
@@ -332,7 +185,7 @@ position: absolute;
     background-color: none;
 } */
 /* Underline animation */
-/* nav ul li a::after {
+ nav ul li a::after {
     content: '';
     display: block;
     height: 3px;
