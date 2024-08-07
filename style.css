@@ -111,9 +111,9 @@ letter-spacing: -.01em;
 .tab-content {
     display: none;
     position: absolute;
-    background: #fff; */
+    background: #fff; 
 /*     border: 1px solid #ccc; previouse */
-     padding-top: 0px;
+   padding-top: 0px;
     padding-left: 332px;
     z-index: 10;
     top: 99%;
@@ -296,7 +296,7 @@ nav ul li a:hover::after {
 }
  
 
-/*-----------------about-------------*/ */
+/*-----------------about-------------*/ 
 #about{
     padding: 80px 0;
     color: #ababab;
