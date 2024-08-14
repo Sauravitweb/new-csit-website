@@ -1,0 +1,200 @@
+Let's work through the provided questions in the specified format. We'll create lab reports for each of the 8085 microprocessor programs.
+
+---
+
+## 1. Program to Add Two 8-Bit Numbers
+
+**Statement**: Add numbers `22H` & `33H` and store the result in `2050H`.
+
+### Program
+```
+MVI A, 22H  ; Move 22H to Accumulator
+MVI B, 33H  ; Move 33H to B register
+ADD B       ; Add B to A (A = A + B)
+STA 2050H   ; Store result in memory address 2050H
+HLT         ; Terminate program
+```
+
+### Program Table
+
+| Starting Address | Instructions | Opcode | Description                      |
+|------------------|--------------|--------|----------------------------------|
+| 2000             | MVI A, 22H   | 3E     | Move 22H to Accumulator          |
+| 2001             |              | 22     |                                  |
+| 2002             | MVI B, 33H   | 06     | Move 33H to B register           |
+| 2003             |              | 33     |                                  |
+| 2004             | ADD B        | 80     | A = A + B                        |
+| 2005             | STA 2050H    | 32     | Store result in memory address 2050H |
+| 2006             |              | 50     |                                  |
+| 2007             |              | 20     |                                  |
+| 2008             | HLT          | 76     | Terminate program                |
+
+### Input
+| A   | B   |
+|-----|-----|
+| 22H | 33H |
+
+### Output
+| 2050H |
+|-------|
+| 55H   |
+
+---
+
+## 2. Program to Add Two 8-Bit Numbers from Memory
+
+**Statement**: Add numbers from memory location `2050H` & `2051H` and store the result in memory location `2055H`.
+
+### Program
+```
+LDA 2050H   ; Load A with the contents of memory location 2050H
+MOV B, A    ; Copy contents of A to B register
+LDA 2051H   ; Load A with the contents of memory location 2051H
+ADD B       ; Add B to A (A = A + B)
+STA 2055H   ; Store result in memory address 2055H
+HLT         ; Terminate program
+```
+
+### Program Table
+
+| Starting Address | Instructions | Opcode | Description                          |
+|------------------|--------------|--------|--------------------------------------|
+| 2000             | LDA 2050H    | 3A     | Load A with contents from 2050H      |
+| 2001             |              | 50     |                                      |
+| 2002             |              | 20     |                                      |
+| 2003             | MOV B, A     | 47     | Copy contents of A to B              |
+| 2004             | LDA 2051H    | 3A     | Load A with contents from 2051H      |
+| 2005             |              | 51     |                                      |
+| 2006             |              | 20     |                                      |
+| 2007             | ADD B        | 80     | Add B to A                           |
+| 2008             | STA 2055H    | 32     | Store result in memory address 2055H |
+| 2009             |              | 55     |                                      |
+| 2010             |              | 20     |                                      |
+| 2011             | HLT          | 76     | Terminate program                    |
+
+### Input
+| Memory | Value |
+|--------|-------|
+| 2050H  | 22H   |
+| 2051H  | 33H   |
+
+### Output
+| 2055H |
+|-------|
+| 55H   |
+
+---
+
+## 3. Program to Subtract Two 8-Bit Numbers
+
+**Statement**: Subtract numbers from memory location `2050H` & `2051H` and store the result in memory location `2055H`.
+
+### Program
+```
+LDA 2050H   ; Load A with the contents of memory location 2050H
+MOV B, A    ; Copy contents of A to B register
+LDA 2051H   ; Load A with the contents of memory location 2051H
+SUB B       ; Subtract B from A (A = A - B)
+STA 2055H   ; Store result in memory address 2055H
+HLT         ; Terminate program
+```
+
+### Program Table
+
+| Starting Address | Instructions | Opcode | Description                          |
+|------------------|--------------|--------|--------------------------------------|
+| 2000             | LDA 2050H    | 3A     | Load A with contents from 2050H      |
+| 2001             |              | 50     |                                      |
+| 2002             |              | 20     |                                      |
+| 2003             | MOV B, A     | 47     | Copy contents of A to B              |
+| 2004             | LDA 2051H    | 3A     | Load A with contents from 2051H      |
+| 2005             |              | 51     |                                      |
+| 2006             |              | 20     |                                      |
+| 2007             | SUB B        | 90     | Subtract B from A                    |
+| 2008             | STA 2055H    | 32     | Store result in memory address 2055H |
+| 2009             |              | 55     |                                      |
+| 2010             |              | 20     |                                      |
+| 2011             | HLT          | 76     | Terminate program                    |
+
+### Input
+| Memory | Value |
+|--------|-------|
+| 2050H  | 33H   |
+| 2051H  | 22H   |
+
+### Output
+| 2055H |
+|-------|
+| 11H   |
+
+---
+
+## 4. Program to Find 2’s Complement of a Number
+
+**Statement**: Input number from memory location `2013H` and store result in memory location `2052H`.
+
+### Program
+```
+LDA 2013H   ; Load A with the contents of memory location 2013H
+CMA         ; Complement A
+INR A       ; Increment A by 1
+STA 2052H   ; Store result in memory address 2052H
+HLT         ; Terminate program
+```
+
+### Program Table
+
+| Starting Address | Instructions | Opcode | Description                              |
+|------------------|--------------|--------|------------------------------------------|
+| 2000             | LDA 2013H    | 3A     | Load A with contents from 2013H          |
+| 2001             |              | 13     |                                          |
+| 2002             |              | 20     |                                          |
+| 2003             | CMA          | 2F     | Complement A                             |
+| 2004             | INR A        | 3C     | Increment A by 1                         |
+| 2005             | STA 2052H    | 32     | Store result in memory address 2052H     |
+| 2006             |              | 52     |                                          |
+| 2007             |              | 20     |                                          |
+| 2008             | HLT          | 76     | Terminate program                        |
+
+### Input
+| Memory | Value |
+|--------|-------|
+| 2013H  | 22H   |
+
+### Output
+| 2052H |
+|-------|
+| DEH   |
+
+---
+
+## 5. Program to Right Shift 8-Bit Numbers
+
+**Statement**: Shift an eight-bit data four bits right. Assume data is in memory location `2051H`. Store result in memory location `2055H`.
+
+### Program
+```
+LDA 2051H   ; Load A with the contents of memory location 2051H
+RRC         ; Rotate accumulator right
+RRC         ; Rotate accumulator right
+RRC         ; Rotate accumulator right
+RRC         ; Rotate accumulator right
+STA 2055H   ; Store result in memory address 2055H
+HLT         ; Terminate program
+```
+
+### Program Table
+
+| Starting Address | Instructions | Opcode | Description                              |
+|------------------|--------------|--------|------------------------------------------|
+| 2000             | LDA 2051H    | 3A     | Load A with contents from 2051H          |
+| 2001             |              | 51     |                                          |
+| 2002             |              | 20     |                                          |
+| 2003             | RRC          | 0F     | Rotate right                             |
+| 2004             | RRC          | 0F     | Rotate right                             |
+| 2005             | RRC          | 0F     | Rotate right                             |
+| 2006             | RRC          | 0F     | Rotate right                             |
+| 2007             | STA 2055H    | 32     | Store result in memory address 2055H     |
+| 2008             |              | 55     |                                          |
+| 2009             |              | 20     |                                          |
+| 2010             | HLT          | 76    
