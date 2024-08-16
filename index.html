@@ -309,75 +309,14 @@
                         <img src="Images/Pyq_qsnmg src="Images/Pyq_qsn/DS/DS_2065.jpg" alt="blog">
                         <img src="Images/Pyq_qsn/DS/DS_2065(1).jpg" alt="blog">
                     </div>
-<!--                     <div class="blog-text">
-<!-- <span> 31 December 2023 / Graphics Design </span> -->
-<!--                        <p class="blog-title">What has happened of all of the graphics design</p>
-                        <h2>Crafting Visual Narratives: A Glimpse into My Graphic Design Odyssey<br></h2>
-                <p><h3>Introduction: The Artistry of Graphic Design<br></h3>
-- Welcome to the world where visual storytelling takes center stage, and graphic design becomes a language of expression.<br>
-- Explore the profound impact of graphic design in conveying messages and evoking emotions.<br>
 
-<h3>The Foundations of My Design Approach<br></h3>
-- Delve into my commitment to principles like balance, contrast, alignment, and proximity.<br>
-- Share insights into the synergy between color theory and typography in shaping the visual narrative.<br>
-
-<h3>Tools I Weave Magic With<br></h3>
-- Unveil the palette of graphic design software and tools I wield in my creative process.<br>
-- Explain how each tool contributes to the intricacies of my design work.<br>
-
-<h3>The Artistic Alchemy: My Creative Process<br></h3>
-- Walk through the stages of ideation, creation, and refinement in my design process.<br>
-- Narrate the stories behind some of my favorite projects, showcasing the evolution of ideas to visuals.<br>
-
-<h3>Capturing the Zeitgeist: Trends in My Design Universe<br></h3>
-- Discuss the current trends that influence my design aesthetics.<br>
-- Illustrate how I balance staying on-trend while preserving a unique, timeless quality in my work.<br>
-                </div> --> 
                     
                 </div>
             </div>
-    <!--    Blogs container  -->
-    <!--- Important  --->
-<!--                  <div class="about-col-2">
-        <h1 class="sub-title">About me</h1>
-        <p>Hello, He's Saurav Khanal From Nepal</p>
-    <div class="tab-titles">
-        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
-        <div class="tab-links" onclick="opentab('experience')">Experience</div>
-        <div class="tab-links" onclick="opentab('education')">Education</div>
-    </div>        
-    <div class="tab-contents active-tab" id="skills"><ul>
-    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-    <li><span>Web Development</span><br>Web app Development</li>
-    <li><span>App Development</span><br>Building Android/ios apps</li>
-    </ul></div>
-    <div class="tab-contents" id="experience"><ul>
-        <li><span>2024 - Present</span><br>Digital Creater</li>
-    </ul></div>
-        <div class="tab-contents" id="education"><ul>
-        <li><span>2024 - Present</span><br>B.Sc.CSIT at Mechi Multiple Campus</li>
-    <li><span>2023</span><br>+2 from Mohanmaya Secondary School</li>
-</ul></div> -->
-  <!--- Important  --->
-<!--     <div class="copyright">
-        <p>© Copyright 2024, CSITAN</p>
-    </div> -->
+   
                     </div>
 </div>
-<script>
-document.getElementById("DS2065").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default anchor behavior
-    var content = document.getElementById("DS2065-content");
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "flex";
-    } else {
-        content.style.display = "none";
-    }
-});
 
-
-
-</script>
 
 <script>
 
@@ -424,18 +363,7 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 
     </script>           
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu()
-    {
-        sidemenu.style.right = "0";
-    }
-    function closemenu()
-    {
-        sidemenu.style.right = "-200px";
-    }
 
-</script>
     
     
     
@@ -530,98 +458,9 @@ document.querySelectorAll('.tab').forEach(tab => {
 
 
  
- <script type="text/javascript">
-    $(document).ready(function(){
-        $(".js_only").hide();
-        setTimeout(function () {
-            $(".js_only").show();
-        }, 3000);
-    });
-</script>
 
      
-<!--     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('nav ul li.tab');
-            const tabContents = document.querySelectorAll('.tab-content');
-            const nav = document.querySelector('nav');
 
-            let showTimeout, hideTimeout;
-
-            tabs.forEach(tab => {
-                tab.addEventListener('mouseenter', function() {
-                    // Clear any existing hide timeout
-                    clearTimeout(hideTimeout);
-
-                    // Hide content of all other tabs immediately
-                    tabContents.forEach(content => {
-                        content.classList.remove('show');
-                    });
-
-                    // Show content of the hovered tab after 3 seconds
-                    const content = tab.querySelector('.tab-content');
-                    if (content) {
-                        showTimeout = setTimeout(() => {
-                            if (tab.matches(':hover')) {
-                                content.classList.add('show');
-                            }
-                        }, 3000); // 3 seconds delay before showing
-                    }
-                });
-
-                tab.addEventListener('mouseleave', function() {
-                    // Clear any existing show timeout
-                    clearTimeout(showTimeout);
-
-                    // Delay hiding the content by 3 seconds
-                    const content = tab.querySelector('.tab-content');
-                    if (content) {
-                        hideTimeout = setTimeout(() => {
-                            if (!nav.matches(':hover')) {
-                                content.classList.remove('show');
-                            }
-                        }, 3000); // 3 seconds delay before hiding
-                    }
-                });
-            });
-
-            // Additional event listener for nav mouseenter
-            nav.addEventListener('mouseenter', function() {
-                // Clear any existing hide timeout to keep content visible
-                clearTimeout(hideTimeout);
-            });
-
-            // Additional event listener for nav mouseleave
-            nav.addEventListener('mouseleave', function() {
-                // Hide all tab contents after 3 seconds if mouse leaves the nav area
-                hideTimeout = setTimeout(() => {
-                    tabContents.forEach(content => {
-                        content.classList.remove('show');
-                    });
-                }, 3000);
-            });
-        });
-    </script> -->
-
-<!--     <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzP0FXe9TqK5VOR86Weic_FZTYcdheb-i3WSKNuCpmmfBbBAZ298z5FqmQ4E66XHCa9wQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg");
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        }
-            
-        )
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script> -->
 </script>
     <script src="script.js"></script>
 </body>
